@@ -13,7 +13,7 @@ echo.
 echo Downloading and installing deps ...
 echo.
 
-rem %CK_ENV_COMPILER_PYTHON_FILE% -m pip install --ignore-installed numpy pyyaml mkl mkl-include setuptools cmake cffi typing -t %PACKAGE_LIB_DIR%
+%CK_ENV_COMPILER_PYTHON_FILE% -m pip install --ignore-installed numpy pyyaml mkl mkl-include setuptools cmake cffi typing -t %PACKAGE_LIB_DIR%
 if %errorlevel% neq 0 (
  echo.
  echo Error: Failed installing deps ...
@@ -36,6 +36,9 @@ rem ############################################################################
 echo.
 echo Building ...
 echo.
+
+set CMAKE_GENERATOR=%CK_CMAKE_GENERATOR%
+set DISTUTILS_USE_SDK=1
 
 %CK_ENV_COMPILER_PYTHON_FILE% setup.py install --prefix=%PACKAGE_LIB_DIR%
 if %errorlevel% neq 0 (
