@@ -1,0 +1,40 @@
+{
+  "customize": {
+    "extra_dir": "", 
+    "install_env": {
+      "PACKAGE_URL": "https://github.com/pytorch/pytorch"
+    }, 
+    "version": "master"
+  }, 
+  "deps": {
+    "python": {
+      "add_to_path": "yes", 
+      "local": "yes", 
+      "name": "Python", 
+      "sort": 20, 
+      "tags": "compiler,python"
+    }
+  }, 
+  "end_full_path_universal": "lib$#sep#$torch$#sep#$__init__.py", 
+  "need_cpu_info": "yes", 
+  "only_for_host_os_tags": [
+    "linux", 
+    "windows"
+  ], 
+  "only_for_target_os_tags": [
+    "linux", 
+    "windows"
+  ], 
+  "package_extra_name": " (cpu)", 
+  "process_script": "install", 
+  "soft_uoa": "954c41a2f8668a9b", 
+  "suggested_path": "pytorch-cpu", 
+  "tags": [
+    "lib", 
+    "pytorch", 
+    "pytorch-cpu", 
+    "vmaster", 
+    "vcpu", 
+    "channel-stable"
+  ]
+}
