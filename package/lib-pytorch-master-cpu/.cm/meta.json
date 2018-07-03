@@ -9,6 +9,12 @@
     "version": "master"
   }, 
   "deps": {
+    "compiler": {
+      "local": "yes",
+      "name": "Compiler",
+      "sort": 10,
+      "tags": "compiler,lang-c"
+    },
     "python": {
       "add_to_path": "yes", 
       "local": "yes", 

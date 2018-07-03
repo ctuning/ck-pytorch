@@ -47,7 +47,8 @@ fi
 MAJOR_PYTHON_VERSION=`${CK_ENV_COMPILER_PYTHON_FILE} -c 'import sys;print(sys.version[0])'`
 
 ######################################################################################
-echo "Cloning PyTorch ..."
+echo ""
+echo "Cloning ..."
 echo ""
 
 cd ${INSTALL_DIR}
@@ -57,7 +58,20 @@ cd pytorch
 
 export NO_CUDA=${NO_CUDA}
 
+######################################################################################
+echo ""
+echo "Building ..."
+echo ""
+
 ${CK_ENV_COMPILER_PYTHON_FILE} setup.py install --prefix=${EXTRA_PYTHON_SITE}
+if [ "${?}" != "0" ] ; then
+  echo "Error: installation failed!"
+  exit 1
+fi
+
+######################################################################################
+echo "Preparing symbolic link for lib ..."
+echo ""
 
 ln -s $PACKAGE_LIB_DIR ${INSTALL_DIR}/lib
 
