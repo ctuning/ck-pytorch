@@ -1,2 +1,7 @@
-# ck-pytorch
-Integration of PyTorch to Collective Knowledge workflow framework to provide unified CK JSON API for AI (customized builds across diverse libraries and hardware, unified AI API, collaborative experiments, performance optimization and model/data set tuning): 
+# Collective Knowledge repository for PyTorch
+
+[![logo](https://github.com/ctuning/ck-guide-images/blob/master/logo-powered-by-ck.png)](https://github.com/ctuning/ck)
+[![logo](https://github.com/ctuning/ck-guide-images/blob/master/logo-validated-by-the-community-simple.png)](http://cTuning.org)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
+## Introduction

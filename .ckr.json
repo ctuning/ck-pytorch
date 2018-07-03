@@ -3,7 +3,15 @@
   "data_name": "ck-pytorch", 
   "dict": {
     "url": "https://github.com/ctuning/ck-pytorch", 
-    "shared": "git"
+    "shared": "git",
+    "repo_deps": [
+      {
+        "repo_uoa": "ck-autotuning"
+      },
+      {
+        "repo_uoa": "ck-math"
+      }
+    ]
   }, 
   "data_alias": "ck-pytorch", 
   "data_uoa": "ck-pytorch"
