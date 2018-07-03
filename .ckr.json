@@ -1,0 +1,10 @@
+{
+  "data_uid": "9116e3c9d3784902", 
+  "data_name": "ck-pytorch", 
+  "dict": {
+    "url": "https://github.com/ctuning/ck-pytorch", 
+    "shared": "git"
+  }, 
+  "data_alias": "ck-pytorch", 
+  "data_uoa": "ck-pytorch"
+}
