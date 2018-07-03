@@ -13,7 +13,7 @@ echo.
 echo Downloading and installing deps ...
 echo.
 
-%CK_ENV_COMPILER_PYTHON_FILE% -m pip install --ignore-installed numpy pyyaml mkl mkl-include setuptools cmake cffi typing -t %PACKAGE_LIB_DIR%
+rem %CK_ENV_COMPILER_PYTHON_FILE% -m pip install --ignore-installed numpy pyyaml mkl mkl-include setuptools cmake cffi typing -t %PACKAGE_LIB_DIR%
 if %errorlevel% neq 0 (
  echo.
  echo Error: Failed installing deps ...

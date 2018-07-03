@@ -42,6 +42,8 @@ $ sudo pip install ck
 
 ### Windows
 
+*We still need to provide proper support to build PyTorch via CK on Windows*
+
 First you need to download and install a few dependencies from the following sites:
 
 * Git: https://git-for-windows.github.io
