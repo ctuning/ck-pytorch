@@ -1,13 +1,13 @@
 {
   "customize": {
-    "extra_dir": "", 
+    "extra_dir": "",
     "install_env": {
-      "PACKAGE_URL": "https://github.com/pytorch/pytorch",
-      "NO_CUDA":1
-    }, 
+      "NO_CUDA": 1,
+      "PACKAGE_URL": "https://github.com/pytorch/pytorch"
+    },
     "use_git_revision": "yes",
     "version": "master"
-  }, 
+  },
   "deps": {
     "cmake": {
       "local": "yes",
@@ -22,33 +22,33 @@
       "tags": "compiler,lang-c"
     },
     "python": {
-      "add_to_path": "yes", 
-      "local": "yes", 
-      "name": "Python", 
-      "sort": 20, 
+      "add_to_path": "yes",
+      "local": "yes",
+      "name": "Python",
+      "sort": 20,
       "tags": "compiler,python"
     }
-  }, 
-  "end_full_path_universal": "lib$#sep#$torch$#sep#$__init__.py", 
-  "need_cpu_info": "yes", 
+  },
+  "end_full_path_universal": "lib$#sep#$torch$#sep#$__init__.py",
+  "need_cpu_info": "yes",
   "only_for_host_os_tags": [
-    "linux", 
+    "linux",
     "windows"
-  ], 
+  ],
   "only_for_target_os_tags": [
-    "linux", 
+    "linux",
     "windows"
-  ], 
-  "package_extra_name": " (cpu)", 
-  "process_script": "install", 
-  "soft_uoa": "954c41a2f8668a9b", 
-  "suggested_path": "pytorch-cpu", 
+  ],
+  "package_extra_name": " (cpu)",
+  "process_script": "install",
+  "soft_uoa": "954c41a2f8668a9b",
+  "suggested_path": "pytorch-cpu",
   "tags": [
-    "lib", 
-    "pytorch", 
-    "pytorch-cpu", 
-    "vmaster", 
-    "vcpu", 
+    "lib",
+    "pytorch",
+    "pytorch-cpu",
+    "vmaster",
+    "vcpu",
     "channel-stable"
   ]
 }
