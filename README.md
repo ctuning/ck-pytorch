@@ -15,9 +15,7 @@ as a part of our long-term community initiative
 to [unify and automate AI](http://cKnowledge.org/ai) 
 using [Collective Knowledge Framework (CK)](http://github.com/ctuning/ck/wiki).
 
-## Coordination of development
-
-* [cTuning Foundation](http://cTuning.org)
+## Maintainers
 * [dividiti](http://dividiti.com)
 
 ## Minimal CK installation
