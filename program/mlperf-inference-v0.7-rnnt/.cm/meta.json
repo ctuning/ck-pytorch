@@ -25,13 +25,13 @@
     },
     "lib-python-loadgen": {
       "local": "yes",
-      "name": "Python loadgen library",
+      "name": "Python LoadGen library",
       "sort": 60,
       "tags": "lib,python-package,loadgen"
     },
     "mlperf-inference-dividiti-rnnt": {
       "local": "yes",
-      "name": "Python opencv library",
+      "name": "Python MLPerf Inference RNN-T",
       "sort": 50,
       "tags": "mlperf,inference,source,dividiti.rnnt"
     },
@@ -59,7 +59,5 @@
     "rnnt",
     "rnn-t",
     "mlperf"
-  ],
-  "template": "yes",
-  "template_type": "Object Detection via TensorFlow (Python)"
+  ]
 }

@@ -20,7 +20,7 @@
   "end_full_path": {
     "linux": "rnnt.pt"
   },
-  "package_extra_name": " (RNN-T)",
+  "package_extra_name": " (MLPerf RNN-T)",
   "process_script": "install",
   "soft_uoa": "34c70aa3ff65a22c",
   "suggested_path": "model-pytorch-rnnt",
