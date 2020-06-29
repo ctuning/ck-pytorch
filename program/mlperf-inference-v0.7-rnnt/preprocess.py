@@ -15,10 +15,13 @@ def ck_preprocess(i):
 
   inferencepath = dep_env('mlperf-inference-dividiti-rnnt', 'CK_ENV_MLPERF_INFERENCE')
 
-  pythonpath = os.path.join(os.environ['PYTHONPATH'] + ":" + \
-                    os.path.join(inferencepath,"v0.7/speech_recognition/rnnt") + ":" + \
-                    os.path.join(inferencepath,"v0.7/speech_recognition/rnnt/pytorch"))
+  try:
+    pythonpath = os.environ['PYTHONPATH'] + ":"
+  except KeyError:
+    pythonpath = ""
 
-  os.environ['PYTHONPATH'] = pythonpath
+  os.environ['PYTHONPATH'] = pythonpath + \
+                               os.path.join(inferencepath,"v0.7/speech_recognition/rnnt") + ":" + \
+                               os.path.join(inferencepath,"v0.7/speech_recognition/rnnt/pytorch")
 
   return {'return': 0}
