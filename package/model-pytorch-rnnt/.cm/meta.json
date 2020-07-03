@@ -2,9 +2,9 @@
   "check_exit_status": "yes",
   "customize": {
     "extra_dir": "",
-    "force_ask_path": "yes",
+    "force_ask_path": "no",
     "install_env": {
-      "PACKAGE_NAME": "DistributedDataParallel_1576581068.9962234-epoch-100.pt?download=1",
+      "PACKAGE_NAME": "DistributedDataParallel_1576581068.9962234-epoch-100.pt",
       "PACKAGE_SKIP_LINUX_MAKE": "YES",
       "PACKAGE_UNZIP": "NO",
       "PACKAGE_URL": "https://zenodo.org/record/3662521/files/",
