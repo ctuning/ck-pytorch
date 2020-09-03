@@ -1,19 +1,17 @@
 # Collective Knowledge repository for PyTorch
 
+*This project is hosted by the [cTuning foundation (non-profit R&D organization)](https://cTuning.org)*
+
 [![compatibility](https://github.com/ctuning/ck-guide-images/blob/master/ck-compatible.svg)](https://github.com/ctuning/ck)
 [![automation](https://github.com/ctuning/ck-guide-images/blob/master/ck-artifact-automated-and-reusable.svg)](http://cTuning.org/ae)
 [![workflow](https://github.com/ctuning/ck-guide-images/blob/master/ck-workflow.svg)](http://cKnowledge.org)
 
-[![DOI](https://zenodo.org/badge/139562696.svg)](https://zenodo.org/badge/latestdoi/139562696)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ## Introduction
 
-This repository provides high-level, portable and customizable workflows
-for [PyTorch](http://pytorch.org) 
-as a part of our long-term community initiative
-to [unify and automate AI](http://cKnowledge.org/ai) 
-using [Collective Knowledge Framework (CK)](http://github.com/ctuning/ck/wiki).
+This repository provides portable, customizable, and reproducible workflows, automation actions, and reusable artifacts
+for [PyTorch](http://pytorch.org) in the [Collective Knowledge format (CK)](https://github.com/ctuning/ck).
 
 ## Maintainers
 * [dividiti](http://dividiti.com)
