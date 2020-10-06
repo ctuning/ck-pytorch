@@ -4,7 +4,10 @@
     "install_env": {
       "PIP_INSTALL_OPTIONS": "--ignore-installed",
       "PYTHON_PACKAGE_NAME": "torch"
-    }
+    },
+    "supported_versions": [
+        "1.0.0", "1.0.1", "1.1.0", "1.2.0", "1.3.0", "1.3.1", "1.4.0", "1.5.0", "1.5.1", "1.6.0"
+    ]
   },
   "deps": {
     "python": {
