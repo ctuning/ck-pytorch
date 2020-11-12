@@ -22,6 +22,10 @@ FULL_REPORT             = os.getenv('CK_SILENT_MODE', '0') in ('NO', 'no', 'OFF'
 #
 BATCH_COUNT             = int(os.getenv('CK_BATCH_COUNT', 1))
 
+## Enabling GPU if available and not disabled:
+#
+USE_CUDA                = torch.cuda.is_available() and (os.getenv('CK_DISABLE_CUDA', '0') in ('NO', 'no', 'OFF', 'off', '0'))
+
 
 def main():
     global BATCH_SIZE
@@ -57,6 +61,9 @@ def main():
     model = torch.hub.load('pytorch/vision' + torchvision_version, TORCH_MODEL_NAME, pretrained=True)
     model.eval()
 
+    # move the model to GPU for speed if available
+    if USE_CUDA:
+        model.to('cuda')
 
     setup_time = time.time() - setup_time_begin
 
@@ -75,6 +82,7 @@ def main():
       
         begin_time = time.time()
         batch_data, image_index = load_preprocessed_batch(image_list, image_index)
+        torch_batch = torch.from_numpy( batch_data )
 
         load_time = time.time() - begin_time
         total_load_time += load_time
@@ -85,13 +93,12 @@ def main():
         # Classify one batch
         begin_time = time.time()
 
-        # move the input and model to GPU for speed if available
-        if torch.cuda.is_available():
-            batch_data = batch_data.to('cuda')
-            model.to('cuda')
+        # move the input to GPU for speed if available
+        if USE_CUDA:
+            torch_batch = torch_batch.to('cuda')
 
         with torch.no_grad():
-            batch_results = model( torch.from_numpy( batch_data ) )
+            batch_results = model( torch_batch )
 
         classification_time = time.time() - begin_time
         if FULL_REPORT:
