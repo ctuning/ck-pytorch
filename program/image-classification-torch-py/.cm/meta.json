@@ -51,6 +51,12 @@
       "sort": 40,
       "tags": "lib,python-package,numpy"
     },
+    "lib-python-pillow": {
+      "local": "yes",
+      "name": "Python Pillow library",
+      "sort": 50,
+      "tags": "lib,python-package,pillow"
+    },
     "lib-python-torch": {
       "local": "yes",
       "name": "PyTorch library",
