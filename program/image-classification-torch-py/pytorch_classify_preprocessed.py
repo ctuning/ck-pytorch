@@ -7,9 +7,7 @@ import shutil
 import numpy as np
 import torch
 
-from imagenet_helper import (load_preprocessed_batch, image_list, class_labels,
-    MODEL_IMAGE_WIDTH, MODEL_IMAGE_HEIGHT, MODEL_DATA_LAYOUT, MODEL_COLOURS_BGR, MODEL_INPUT_DATA_TYPE, MODEL_DATA_TYPE,
-    IMAGE_DIR, IMAGE_LIST_FILE, MODEL_NORMALIZE_DATA, SUBTRACT_MEAN, GIVEN_CHANNEL_MEANS, BATCH_SIZE)
+from imagenet_helper import (load_preprocessed_batch, image_list, class_labels, BATCH_SIZE)
 
 TORCH_MODEL_NAME        = os.getenv('ML_TORCH_MODEL_NAME', 'resnet50')
 
@@ -31,19 +29,9 @@ def main():
     global BATCH_SIZE
     global BATCH_COUNT
 
-    bg_class_offset=0
-
-    print('Images dir: ' + IMAGE_DIR)
-    print('Image list file: ' + IMAGE_LIST_FILE)
-    print('Batch size: {}'.format(BATCH_SIZE))
-    print('Batch count: {}'.format(BATCH_COUNT))
-    print('Results dir: ' + RESULTS_DIR);
-    print('Normalize: {}'.format(MODEL_NORMALIZE_DATA))
-    print('Subtract mean: {}'.format(SUBTRACT_MEAN))
-    print('Per-channel means to subtract: {}'.format(GIVEN_CHANNEL_MEANS))
-    print("Background/unlabelled classes to skip: {}".format(bg_class_offset))
-
     setup_time_begin = time.time()
+
+    bg_class_offset=0
 
     # Cleanup results directory
     if os.path.isdir(RESULTS_DIR):
